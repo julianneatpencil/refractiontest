@@ -3,7 +3,7 @@ import { MeshRefractionMaterial, Environment, OrbitControls } from '@react-three
 import { RGBELoader } from 'three/examples/jsm/Addons.js';
 
 function Scene() {
-  const texture = useLoader(RGBELoader, '/material/aerodynamics_workshop_1k.hdr');
+  const texture = useLoader(RGBELoader, `${import.meta.env.BASE_URL}/material/aerodynamics_workshop_1k.hdr`);
   return (
     <Canvas shadows camera={{ position: [0, 0, 3], fov: 50 }}>
       <ambientLight intensity={0.5} />
